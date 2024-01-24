@@ -1,16 +1,13 @@
-package mate.academy.Book.Store.repository.ipml;
+package book.store.repository.ipml;
 
-import mate.academy.Book.Store.model.Book;
-import mate.academy.Book.Store.repository.BookRepository;
+import book.store.model.Book;
+import book.store.repository.BookRepository;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-
-import java.util.List;
 
 @Repository
 public class BookRepositoryImpl implements BookRepository {
