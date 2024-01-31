@@ -2,7 +2,6 @@ package book.store;
 
 import book.store.model.Book;
 import book.store.service.BookService;
-import java.math.BigDecimal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -26,12 +25,6 @@ public class BookStoreApplication {
     public CommandLineRunner commandLineRunner() {
         return args -> {
             Book newBook = new Book();
-            newBook.setTitle("book_title");
-            newBook.setAuthor("Taras Tkachuk");
-            newBook.setPrice(BigDecimal.valueOf(12.99));
-            newBook.setIsbn("ISBN_NEW_BOOK");
-            bookService.save(newBook);
-            System.out.println("My book = " + bookService.findAll());
         };
     }
 }
