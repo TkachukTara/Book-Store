@@ -11,5 +11,9 @@ public class CreateBookRequestDto {
     private BigDecimal price;
     private String description;
     private String coverImage;
-    private String isbn = "Isbn" + new Random().nextInt(1000);
+    private String isbn;
+
+    public CreateBookRequestDto() {
+        this.isbn = "Isbn" + new Random().nextInt(1000);
+    }
 }
