@@ -1,6 +1,5 @@
 package book.store;
 
-import book.store.model.Book;
 import book.store.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -24,7 +23,6 @@ public class BookStoreApplication {
     @Bean
     public CommandLineRunner commandLineRunner() {
         return args -> {
-            Book newBook = new Book();
         };
     }
 }

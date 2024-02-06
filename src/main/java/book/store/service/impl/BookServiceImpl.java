@@ -2,6 +2,7 @@ package book.store.service.impl;
 
 import book.store.dto.BookDto;
 import book.store.dto.CreateBookRequestDto;
+import book.store.dto.UpdateBookRequestDto;
 import book.store.exception.EntityNotFoundException;
 import book.store.mapper.BookMapper;
 import book.store.model.Book;
@@ -40,5 +41,12 @@ public class BookServiceImpl implements BookService {
     @Override
     public void deleteById(Long id) {
         bookRepository.deleteById(id);
+    }
+
+    @Override
+    public BookDto updateBook(Long id, UpdateBookRequestDto updatedBook) {
+        Book bookFromDb = bookMapper.toModel(updatedBook);
+        bookFromDb.setId(id);
+        return bookMapper.toDto(bookRepository.save(bookFromDb));
     }
 }
