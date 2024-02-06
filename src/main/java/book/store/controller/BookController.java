@@ -2,7 +2,6 @@ package book.store.controller;
 
 import book.store.dto.BookDto;
 import book.store.dto.CreateBookRequestDto;
-import book.store.dto.UpdateBookRequestDto;
 import book.store.service.BookService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -46,7 +45,7 @@ public class BookController {
 
     @PutMapping("/{id}")
     public BookDto updateById(@PathVariable Long id,
-                              @RequestBody UpdateBookRequestDto updateBookRequestDto) {
+                              @RequestBody CreateBookRequestDto updateBookRequestDto) {
         return bookService.updateBook(id, updateBookRequestDto);
     }
 
