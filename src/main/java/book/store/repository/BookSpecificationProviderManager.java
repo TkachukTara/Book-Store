@@ -2,13 +2,15 @@ package book.store.repository;
 
 import book.store.model.Book;
 import java.util.List;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-@RequiredArgsConstructor
 @Component
 public class BookSpecificationProviderManager implements SpecificationProviderManager<Book> {
-    private List<SpecificationProvider<Book>> bookSpecificationProviders;
+    private final List<SpecificationProvider<Book>> bookSpecificationProviders;
+
+    public BookSpecificationProviderManager(List<SpecificationProvider<Book>> bookSpecificationProviders) {
+        this.bookSpecificationProviders = bookSpecificationProviders;
+    }
 
     @Override
     public SpecificationProvider<Book> getSpecificationProvider(String key) {
