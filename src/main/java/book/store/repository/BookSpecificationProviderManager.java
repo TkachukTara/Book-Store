@@ -8,7 +8,8 @@ import org.springframework.stereotype.Component;
 public class BookSpecificationProviderManager implements SpecificationProviderManager<Book> {
     private final List<SpecificationProvider<Book>> bookSpecificationProviders;
 
-    public BookSpecificationProviderManager(List<SpecificationProvider<Book>> bookSpecificationProviders) {
+    public BookSpecificationProviderManager(List<SpecificationProvider<Book>>
+                                                    bookSpecificationProviders) {
         this.bookSpecificationProviders = bookSpecificationProviders;
     }
 
